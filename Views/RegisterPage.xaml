@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tortugueroApp.Views.RegisterPage"
+             BackgroundColor="#F7F5F2">
+
+    <Grid>
+        
+        <Image Source="tortuguero_bg.jpg"
+               Aspect="AspectFill" />
+        
+        
+        <BoxView BackgroundColor="#66000000" />
+
+        
+        <Button Text="←"
+                FontSize="28"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                WidthRequest="50"
+                HeightRequest="50"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10,40,0,0"
+                Clicked="OnBackClicked"/>
+
+        
+        <Grid RowDefinitions="Auto,*">
+            
+         
+            <VerticalStackLayout Grid.Row="0" 
+                                Padding="16"
+                                VerticalOptions="Start">
+                <Label Text="Tortuguero Hotel"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+
+            
+            <ScrollView Grid.Row="1" VerticalOptions="End" Padding="16,0,16,32">
+                <Frame Padding="24"
+                       CornerRadius="12"
+                       HasShadow="False"
+                       BorderColor="Transparent">
+                    <Frame.Background>
+                        <SolidColorBrush Color="#F2F7F5F2" />
+                    </Frame.Background>
+
+                    <VerticalStackLayout Spacing="24">
+                        
+                       
+                        <Label Text="Create your account"
+                               FontSize="28"
+                               FontAttributes="Bold"
+                               TextColor="#3C3C3C" />
+
+                        
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Full Name"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="#3C3C3C" />
+                            
+                            <Entry x:Name="FullNameEntry"
+                                   Placeholder="e.g. Alex Doe"
+                                   TextColor="#3C3C3C"
+                                   PlaceholderColor="#9CA3AF"
+                                   BackgroundColor="#E8F0E8"
+                                   HeightRequest="56"
+                                   FontSize="16" />
+                        </VerticalStackLayout>
+
+                       
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Email Address"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="#3C3C3C" />
+                            
+                            <Entry x:Name="EmailEntry"
+                                   Placeholder="e.g. alex.doe@email.com"
+                                   Keyboard="Email"
+                                   TextColor="#3C3C3C"
+                                   PlaceholderColor="#9CA3AF"
+                                   BackgroundColor="#E8F0E8"
+                                   HeightRequest="56"
+                                   FontSize="16" />
+                        </VerticalStackLayout>
+
+                     
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Username"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="#3C3C3C" />
+                            
+                            <Entry x:Name="UsernameEntry"
+                                   Placeholder="e.g. alexdoe123"
+                                   TextColor="#3C3C3C"
+                                   PlaceholderColor="#9CA3AF"
+                                   BackgroundColor="#E8F0E8"
+                                   HeightRequest="56"
+                                   FontSize="16" />
+                        </VerticalStackLayout>
+
+                       
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Phone Number"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="#3C3C3C" />
+                            
+                            <Entry x:Name="PhoneEntry"
+                                   Placeholder="e.g. +506 1234-5678"
+                                   Keyboard="Telephone"
+                                   TextColor="#3C3C3C"
+                                   PlaceholderColor="#9CA3AF"
+                                   BackgroundColor="#E8F0E8"
+                                   HeightRequest="56"
+                                   FontSize="16" />
+                        </VerticalStackLayout>
+
+                       
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Password"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="#3C3C3C" />
+                            
+                            <Grid ColumnDefinitions="*,Auto">
+                                <Entry x:Name="PasswordEntry"
+                                       Grid.Column="0"
+                                       Placeholder="Enter your password"
+                                       IsPassword="True"
+                                       TextColor="#3C3C3C"
+                                       PlaceholderColor="#9CA3AF"
+                                       BackgroundColor="#E8F0E8"
+                                       HeightRequest="56"
+                                       FontSize="16" />
+                                
+                                <ImageButton Grid.Column="0"
+                                            Source="visibility_off.png"
+                                            BackgroundColor="Transparent"
+                                            WidthRequest="24"
+                                            HeightRequest="24"
+                                            HorizontalOptions="End"
+                                            Margin="0,0,12,0"
+                                            Clicked="OnTogglePasswordVisibility" />
+                            </Grid>
+                        </VerticalStackLayout>
+
+                       
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Confirm Password"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="#3C3C3C" />
+                            
+                            <Grid ColumnDefinitions="*,Auto">
+                                <Entry x:Name="ConfirmPasswordEntry"
+                                       Grid.Column="0"
+                                       Placeholder="Confirm your password"
+                                       IsPassword="True"
+                                       TextColor="#3C3C3C"
+                                       PlaceholderColor="#9CA3AF"
+                                       BackgroundColor="#E8F0E8"
+                                       HeightRequest="56"
+                                       FontSize="16" />
+                                
+                                <ImageButton Grid.Column="0"
+                                            Source="visibility_off.png"
+                                            BackgroundColor="Transparent"
+                                            WidthRequest="24"
+                                            HeightRequest="24"
+                                            HorizontalOptions="End"
+                                            Margin="0,0,12,0"
+                                            Clicked="OnToggleConfirmPasswordVisibility" />
+                            </Grid>
+                        </VerticalStackLayout>
+
+                     
+                        <Button x:Name="RegisterButton"
+                                Text="Register"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                BackgroundColor="#2D5A4B"
+                                HeightRequest="56"
+                                CornerRadius="8"
+                                Margin="0,16,0,0"
+                                Clicked="OnRegisterClicked" />
+
+                       
+                        <ActivityIndicator x:Name="LoadingIndicator"
+                                          IsRunning="False"
+                                          IsVisible="False"
+                                          Color="#2D5A4B"
+                                          HeightRequest="40" />
+
+                       
+                        <HorizontalStackLayout HorizontalOptions="Center" Spacing="4" Margin="0,8,0,0">
+                            <Label Text="Already have an account?"
+                                   FontSize="14"
+                                   TextColor="#3C3C3C" />
+                            <Label Text="Login"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="#2D5A4B"
+                                   TextDecorations="Underline">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnLoginTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </Frame>
+            </ScrollView>
+
+        </Grid>
+    </Grid>
+
+</ContentPage>

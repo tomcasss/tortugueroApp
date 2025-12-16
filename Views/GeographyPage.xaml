@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tortugueroApp.Views.GeographyPage"
+             BackgroundColor="{StaticResource BackgroundLight}">
+    
+    <Grid RowDefinitions="Auto,*">
+        
+        
+        <Frame Grid.Row="0"
+               Padding="16"
+               CornerRadius="0"
+               HasShadow="True"
+               BorderColor="Transparent"
+               BackgroundColor="#CCF7F5F2">
+            <Grid ColumnDefinitions="48,*,48">
+                <Button Grid.Column="0"
+                       Text="←"
+                       FontSize="24"
+                       TextColor="{StaticResource ForestGreen}"
+                       BackgroundColor="Transparent"
+                       Clicked="OnBackClicked" />
+                
+                <Label Grid.Column="1"
+                       Text="Explore Tortuguero"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource ForestGreen}"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </Frame>
+
+     
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="24" Padding="16">
+                
+              
+                <Frame Padding="0"
+                       CornerRadius="16"
+                       HasShadow="True"
+                       BorderColor="Transparent"
+                       IsClippedToBounds="True"
+                       HeightRequest="350">
+                    <Grid>
+                        <Image Source="herogeography.png"
+                               Aspect="AspectFill" />
+                        
+                      
+                        <Frame Padding="24"
+                               CornerRadius="0"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="#B3000000"
+                               VerticalOptions="End">
+                            <VerticalStackLayout Spacing="8">
+                                <Label Text="The Waterways of Tortuguero"
+                                       FontSize="28"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       LineHeight="1.2" />
+                                <Label Text="Navigate the serpentine canals, the lifeblood of this unique rainforest ecosystem."
+                                       FontSize="15"
+                                       TextColor="#E6FFFFFF"
+                                       LineHeight="1.4" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+               
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                    <HorizontalStackLayout Spacing="12">
+                        <Frame Padding="16,10"
+                               CornerRadius="20"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="{StaticResource ForestGreen}">
+                            <Label Text="All"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                        </Frame>
+                        
+                        <Frame Padding="16,10"
+                               CornerRadius="20"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="{StaticResource SandBeige}">
+                            <Label Text="Canals"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource ForestGreen}" />
+                        </Frame>
+                        
+                        <Frame Padding="16,10"
+                               CornerRadius="20"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="{StaticResource SandBeige}">
+                            <Label Text="Wildlife"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource ForestGreen}" />
+                        </Frame>
+                        
+                        <Frame Padding="16,10"
+                               CornerRadius="20"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="{StaticResource SandBeige}">
+                            <Label Text="Rainforest"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource ForestGreen}" />
+                        </Frame>
+                        
+                        <Frame Padding="16,10"
+                               CornerRadius="20"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="{StaticResource SandBeige}">
+                            <Label Text="Beaches"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource ForestGreen}" />
+                        </Frame>
+                    </HorizontalStackLayout>
+                </ScrollView>
+
+           
+                <Frame Padding="0"
+                       CornerRadius="16"
+                       HasShadow="True"
+                       BorderColor="Transparent"
+                       IsClippedToBounds="True"
+                       HeightRequest="380">
+                    <Grid>
+                        <Image Source="seaturtlegeo.png"
+                               Aspect="AspectFill" />
+                        
+                        <Frame Padding="24"
+                               CornerRadius="0"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="#CC000000"
+                               VerticalOptions="End">
+                            <VerticalStackLayout Spacing="8">
+                                <Label Text="Sea Turtle Nesting Grounds"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       TextColor="White" />
+                                <Label Text="Witness the ancient ritual of sea turtles nesting on the dark sands of Tortuguero's beaches, a truly unforgettable spectacle of nature."
+                                       FontSize="15"
+                                       TextColor="#E6FFFFFF"
+                                       LineHeight="1.5" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+               
+                <Frame Padding="0"
+                       CornerRadius="16"
+                       HasShadow="True"
+                       BorderColor="Transparent"
+                       IsClippedToBounds="True"
+                       HeightRequest="380">
+                    <Grid>
+                        <Image Source="nationalpark.png"
+                               Aspect="AspectFill" />
+                        
+                        <Frame Padding="24"
+                               CornerRadius="0"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="#CC000000"
+                               VerticalOptions="End">
+                            <VerticalStackLayout Spacing="8">
+                                <Label Text="Tortuguero National Park"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       TextColor="White" />
+                                <Label Text="Explore the heart of the rainforest, home to jaguars, monkeys, and a dazzling array of tropical birds. Every step is an adventure."
+                                       FontSize="15"
+                                       TextColor="#E6FFFFFF"
+                                       LineHeight="1.5" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+              
+                <Frame Padding="0"
+                       CornerRadius="16"
+                       HasShadow="True"
+                       BorderColor="Transparent"
+                       IsClippedToBounds="True"
+                       HeightRequest="380">
+                    <Grid>
+                        <Image Source="cerro.jpg"
+                               Aspect="AspectFill" />
+                        
+                        <Frame Padding="24"
+                               CornerRadius="0"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="#CC000000"
+                               VerticalOptions="End">
+                            <VerticalStackLayout Spacing="8">
+                                <Label Text="Cerro Tortuguero"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       TextColor="White" />
+                                <Label Text="Hike to the highest point in the area for a breathtaking 360-degree view of the canals, rainforest, and the Caribbean Sea."
+                                       FontSize="15"
+                                       TextColor="#E6FFFFFF"
+                                       LineHeight="1.5" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+        
+    </Grid>
+</ContentPage>

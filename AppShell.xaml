@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="tortugueroApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:tortugueroApp"
+    xmlns:views="clr-namespace:tortugueroApp.Views"
+    Title="Tortuguero"
+    FlyoutBehavior="Disabled">
+
+    
+    <ShellContent
+        Route="Welcome"
+        ContentTemplate="{DataTemplate views:WelcomePage}" />
+
+    
+    <ShellContent
+        Route="Login"
+        ContentTemplate="{DataTemplate views:LoginPage}" />
+
+
+    <ShellContent
+        Route="Register"
+        ContentTemplate="{DataTemplate views:RegisterPage}" />
+
+  
+    <ShellContent
+        Route="MainMenu"
+        ContentTemplate="{DataTemplate views:TortugueroMainPage}" />
+
+  
+    <ShellContent
+        Route="Profile"
+        ContentTemplate="{DataTemplate views:ProfilePage}" />
+
+    
+    <ShellContent
+        Route="History"
+        ContentTemplate="{DataTemplate views:HistoryPage}" />
+
+    
+    <ShellContent
+        Route="Help"
+        ContentTemplate="{DataTemplate views:HelpPage}" />
+
+    <ShellContent
+        Route="Geography"
+        ContentTemplate="{DataTemplate views:GeographyPage}" />
+
+    
+    <ShellContent
+        Route="Ecology"
+        ContentTemplate="{DataTemplate views:EcologyPage}" />
+
+   
+    <ShellContent
+        Route="Booking"
+        ContentTemplate="{DataTemplate views:BookingPage}" />
+
+    
+    <ShellContent
+        Route="Activities"
+        ContentTemplate="{DataTemplate views:ActivitiesPage}" />
+
+   
+    <ShellContent
+        Route="Cart"
+        ContentTemplate="{DataTemplate views:CartPage}" />
+
+   
+    <ShellContent
+        Route="MyBookings"
+        ContentTemplate="{DataTemplate views:MyBookingsPage}" />
+
+    <ShellContent
+        Route="ForgotPassword"
+        ContentTemplate="{DataTemplate views:ForgotPasswordPage}" />
+
+</Shell>

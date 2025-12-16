@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tortugueroApp.Views.HistoryPage"
+             BackgroundColor="{StaticResource BackgroundLight}">
+    
+    <Grid RowDefinitions="Auto,*">
+        
+        <Frame Grid.Row="0"
+               Padding="16"
+               CornerRadius="0"
+               HasShadow="True"
+               BorderColor="Transparent"
+               BackgroundColor="{StaticResource BackgroundLight}">
+            <Grid ColumnDefinitions="48,*,48">
+                <Button Grid.Column="0"
+                       Text="←"
+                       FontSize="24"
+                       TextColor="{StaticResource ForestGreen}"
+                       BackgroundColor="Transparent"
+                       Clicked="OnBackClicked" />
+                
+                <Label Grid.Column="1"
+                       Text="The Story of Tortuguero"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource ForestGreen}"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </Frame>
+
+       
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="0" Padding="16,8,16,24">
+                
+               
+                <Label Text="Discover the rich tapestry of Tortuguero's past, from its ancient roots to its modern-day role as a sanctuary for wildlife. This is a story of transformation, resilience, and the enduring connection between people and nature."
+                       TextColor="{StaticResource ForestGreen}"
+                       FontSize="15"
+                       LineHeight="1.5"
+                       Margin="0,0,0,32" />
+
+               
+                <Grid ColumnDefinitions="40,*" Margin="0,0,0,48">
+                  
+                    <VerticalStackLayout Grid.Column="0" Spacing="0">
+                        <Frame WidthRequest="24"
+                               HeightRequest="24"
+                               CornerRadius="12"
+                               Padding="0"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="#3311d4b4"
+                               HorizontalOptions="Center">
+                            <Label Text="🌿"
+                                   FontSize="14"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" />
+                        </Frame>
+                        <BoxView WidthRequest="1"
+                                 HeightRequest="300"
+                                 BackgroundColor="#D1D5DB"
+                                 HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+
+                 
+                    <VerticalStackLayout Grid.Column="1" Spacing="8">
+                        <Label Text="BEFORE 1500"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#6B7280"
+                               Margin="0,4,0,0" />
+                        
+                        <Label Text="Pre-Columbian Era"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource ForestGreen}" />
+                        
+                        <Label Text="The region was inhabited by various indigenous groups who lived in harmony with the rich biodiversity. Archaeological evidence suggests a deep cultural and spiritual connection to the land and its creatures, particularly the sea turtles."
+                               TextColor="{StaticResource ForestGreen}"
+                               FontSize="15"
+                               LineHeight="1.5"
+                               Margin="0,0,0,12" />
+                        
+                        <Frame Padding="0"
+                               CornerRadius="16"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               IsClippedToBounds="True">
+                            <Image Source="historyhero.png"
+                                   Aspect="AspectFill"
+                                   HeightRequest="200" />
+                        </Frame>
+                    </VerticalStackLayout>
+                </Grid>
+
+               
+                <Grid ColumnDefinitions="40,*" Margin="0,0,0,48">
+                 
+                    <VerticalStackLayout Grid.Column="0" Spacing="0">
+                        <Frame WidthRequest="24"
+                               HeightRequest="24"
+                               CornerRadius="12"
+                               Padding="0"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="#3311d4b4"
+                               HorizontalOptions="Center">
+                            <Label Text="⚓"
+                                   FontSize="14"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" />
+                        </Frame>
+                        <BoxView WidthRequest="1"
+                                 HeightRequest="200"
+                                 BackgroundColor="#D1D5DB"
+                                 HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+
+                  
+                    <VerticalStackLayout Grid.Column="1" Spacing="8">
+                        <Label Text="1500 - 1800"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#6B7280"
+                               Margin="0,4,0,0" />
+                        
+                        <Label Text="Colonial Period &amp; Early Settlement"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource ForestGreen}" />
+                        
+                        <Label Text="Spanish colonizers arrived, but the remote and challenging environment of Tortuguero meant it remained sparsely populated. Early settlements were small, focusing on subsistence farming and fishing, with minimal impact on the turtle populations."
+                               TextColor="{StaticResource ForestGreen}"
+                               FontSize="15"
+                               LineHeight="1.5" />
+                    </VerticalStackLayout>
+                </Grid>
+
+            
+                <Grid ColumnDefinitions="40,*">
+             
+                    <VerticalStackLayout Grid.Column="0" Spacing="0">
+                        <Frame WidthRequest="24"
+                               HeightRequest="24"
+                               CornerRadius="12"
+                               Padding="0"
+                               HasShadow="False"
+                               BorderColor="Transparent"
+                               BackgroundColor="#3311d4b4"
+                               HorizontalOptions="Center">
+                            <Label Text="📉"
+                                   FontSize="14"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" />
+                        </Frame>
+                    </VerticalStackLayout>
+
+                  
+                    <VerticalStackLayout Grid.Column="1" Spacing="8">
+                        <Label Text="1800 - 1950"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#6B7280"
+                               Margin="0,4,0,0" />
+                        
+                        <Label Text="The Rise of the Turtle Trade"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource ForestGreen}" />
+                        
+                        <Label Text="The 19th and early 20th centuries saw the devastating rise of the commercial turtle trade. Green sea turtles were harvested in unsustainable numbers for their meat and shells, pushing the species to the brink of extinction and drastically altering the local ecosystem."
+                               TextColor="{StaticResource ForestGreen}"
+                               FontSize="15"
+                               LineHeight="1.5"
+                               Margin="0,0,0,12" />
+                        
+                        <Frame Padding="0"
+                               CornerRadius="16"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               IsClippedToBounds="True">
+                            <Image Source="historyboat.png"
+                                   Aspect="AspectFill"
+                                   HeightRequest="160" />
+                        </Frame>
+                    </VerticalStackLayout>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+        
+    </Grid>
+</ContentPage>

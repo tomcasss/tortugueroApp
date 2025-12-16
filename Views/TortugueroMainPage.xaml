@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tortugueroApp.Views.TortugueroMainPage"
+             BackgroundColor="{StaticResource SandBeige}">
+
+    <Grid>
+       
+        <Image Source="backgroundmenu.png"
+               Aspect="AspectFill"
+               Opacity="0.5" />
+
+        <Grid RowDefinitions="Auto,*,Auto" Padding="0">
+                
+              
+                <Grid Grid.Row="0" 
+                      ColumnDefinitions="48,*,48" 
+                      Padding="16,16,16,8"
+                      BackgroundColor="Transparent">
+                    
+                    <ImageButton Grid.Column="0"
+                                 Source="menu_icon.png"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="24"
+                                 HeightRequest="24"
+                                 Clicked="OnMenuClicked" />
+                    
+                    <VerticalStackLayout Grid.Column="1" 
+                                        Spacing="2"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center">
+                        <Label Text="Tortuguero"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource ForestGreen}"
+                               HorizontalTextAlignment="Center" />
+                        <Label x:Name="UserNameLabel"
+                               Text="Invitado"
+                               FontSize="12"
+                               TextColor="{StaticResource ForestGreen}"
+                               Opacity="0.7"
+                               HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
+                    
+                    <ImageButton Grid.Column="2"
+                                 Source="account_circle.png"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="24"
+                                 HeightRequest="24"
+                                 Clicked="OnAccountClicked" />
+                </Grid>
+
+                
+                <ScrollView Grid.Row="1">
+                <VerticalStackLayout Spacing="0">
+                    
+                  
+                    <Frame x:Name="HeroFrame"
+                           Margin="16,48,16,16"
+                           Padding="0"
+                           CornerRadius="24"
+                           HasShadow="True"
+                           BorderColor="Transparent"
+                           BackgroundColor="Transparent">
+                        <Grid>
+                            <Image Source="heroimage.png"
+                                   Aspect="AspectFill"
+                                   HeightRequest="300" />
+                            
+                        
+                            <BoxView VerticalOptions="End"
+                                     HeightRequest="150">
+                                <BoxView.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="Transparent" Offset="0.0" />
+                                        <GradientStop Color="#80000000" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </BoxView.Background>
+                            </BoxView>
+                            
+                         
+                            <VerticalStackLayout VerticalOptions="End" Padding="24" Spacing="8">
+                                <Label Text="Discover"
+                                       FontSize="36"
+                                       FontAttributes="Bold"
+                                       TextColor="White" />
+                                <Label Text="Paradise"
+                                       FontSize="36"
+                                       FontAttributes="Bold"
+                                       TextColor="White" />
+                                <Label Text="Explore the natural wonders of Costa Rica's jewel."
+                                       FontSize="14"
+                                       TextColor="White"
+                                       Opacity="0.9"
+                                       MaximumWidthRequest="280" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+
+                
+                    <Grid x:Name="MenuGrid"
+                          Padding="16,32,16,32"
+                          RowDefinitions="*,*,*"
+                          ColumnDefinitions="*,*"
+                          RowSpacing="16"
+                          ColumnSpacing="16">
+             
+                        <Frame Grid.Row="0" Grid.Column="0"
+                               Padding="0"
+                               CornerRadius="32"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               BackgroundColor="Transparent"
+                               HeightRequest="180">
+                            <Grid>
+                                <Image Source="geography.png"
+                                       Aspect="AspectFill" />
+                                <BoxView BackgroundColor="#80234F45" />
+                                <Label Text="Geography"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnGeographyTapped" />
+                                </Frame.GestureRecognizers>
+                            </Grid>
+                        </Frame>
+
+                        
+                        <Frame Grid.Row="0" Grid.Column="1"
+                               Margin="0,32,0,0"
+                               Padding="0"
+                               CornerRadius="32"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               BackgroundColor="Transparent"
+                               HeightRequest="180">
+                            <Grid>
+                                <Image Source="ecology.png"
+                                       Aspect="AspectFill" />
+                                <BoxView BackgroundColor="#800A7A8B" />
+                                <Label Text="Ecology"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEcologyTapped" />
+                                </Frame.GestureRecognizers>
+                            </Grid>
+                        </Frame>
+
+                        
+                        <Frame Grid.Row="1" Grid.Column="0"
+                               Margin="0,-32,0,0"
+                               Padding="0"
+                               CornerRadius="32"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               BackgroundColor="Transparent"
+                               HeightRequest="180">
+                            <Grid>
+                                <Image Source="map.png"
+                                       Aspect="AspectFill" />
+                                <BoxView BackgroundColor="#66EAE5D9" />
+                                <Label Text="Map"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnMapTapped" />
+                                </Frame.GestureRecognizers>
+                            </Grid>
+                        </Frame>
+
+                     
+                        <Frame Grid.Row="1" Grid.Column="1"
+                               Padding="0"
+                               CornerRadius="32"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               BackgroundColor="Transparent"
+                               HeightRequest="180">
+                            <Grid>
+                                <Image Source="history.png"
+                                       Aspect="AspectFill" />
+                                <BoxView BackgroundColor="#99234F45" />
+                                <Label Text="History"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnHistoryTapped" />
+                                </Frame.GestureRecognizers>
+                            </Grid>
+                        </Frame>
+
+                    
+                        <Frame Grid.Row="2" Grid.Column="0"
+                               Margin="0,32,0,0"
+                               Padding="0"
+                               CornerRadius="32"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               BackgroundColor="Transparent"
+                               HeightRequest="180">
+                            <Grid>
+                                <Image Source="help.png"
+                                       Aspect="AspectFill" />
+                                <BoxView BackgroundColor="#800A7A8B" />
+                                <Label Text="Help"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnHelpTapped" />
+                                </Frame.GestureRecognizers>
+                            </Grid>
+                        </Frame>
+
+                      
+                        <Frame Grid.Row="2" Grid.Column="1"
+                               Padding="0"
+                               CornerRadius="32"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               BackgroundColor="Transparent"
+                               HeightRequest="180">
+                            <Grid>
+                                <BoxView>
+                                    <BoxView.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#11d4b4" Offset="0.0" />
+                                            <GradientStop Color="#4ade80" Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </BoxView.Background>
+                                </BoxView>
+                                <Label Text="Book Now"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnBookNowTapped" />
+                                </Frame.GestureRecognizers>
+                            </Grid>
+                        </Frame>
+
+                    </Grid>
+                </VerticalStackLayout>
+            </ScrollView>
+
+         
+            <Grid Grid.Row="2"
+                      ColumnDefinitions="*,*,*,*,*"
+                      Padding="16,8,16,12"
+                      BackgroundColor="#CCEAE5D9"
+                      ColumnSpacing="0">
+                    
+                    <VerticalStackLayout Grid.Column="0" Spacing="4" Padding="8">
+                        <Label Text="🏠"
+                               FontSize="24"
+                               HorizontalTextAlignment="Center" />
+                        <Label Text="Home"
+                               FontSize="12"
+                               TextColor="{StaticResource OceanBlue}"
+                               HorizontalTextAlignment="Center" />
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnHomeTapped" />
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Column="1" Spacing="4" Padding="8">
+                        <Label Text="⛰️"
+                               FontSize="24"
+                               Opacity="0.7"
+                               HorizontalTextAlignment="Center" />
+                        <Label Text="Activities"
+                               FontSize="12"
+                               TextColor="{StaticResource ForestGreen}"
+                               Opacity="0.7"
+                               HorizontalTextAlignment="Center" />
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnActivitiesTapped" />
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Column="2" Spacing="4" Padding="8">
+                        <Grid>
+                            <Label Text="🛒"
+                                   FontSize="24"
+                                   Opacity="0.7"
+                                   HorizontalTextAlignment="Center" />
+                          
+                            <Frame x:Name="CartBadge"
+                                   IsVisible="False"
+                                   WidthRequest="18"
+                                   HeightRequest="18"
+                                   CornerRadius="9"
+                                   Padding="0"
+                                   BackgroundColor="Red"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Start"
+                                   Margin="0,-4,-4,0">
+                                <Label x:Name="CartBadgeLabel"
+                                       Text="0"
+                                       FontSize="10"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center" />
+                            </Frame>
+                        </Grid>
+                        <Label Text="Cart"
+                               FontSize="12"
+                               TextColor="{StaticResource ForestGreen}"
+                               Opacity="0.7"
+                               HorizontalTextAlignment="Center" />
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnCartTapped" />
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Column="3" Spacing="4" Padding="8">
+                        <Label Text="📋"
+                               FontSize="24"
+                               Opacity="0.7"
+                               HorizontalTextAlignment="Center" />
+                        <Label Text="Bookings"
+                               FontSize="12"
+                               TextColor="{StaticResource ForestGreen}"
+                               Opacity="0.7"
+                               HorizontalTextAlignment="Center" />
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnMyBookingsTapped" />
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Column="4" Spacing="4" Padding="8">
+                        <Label Text="👤"
+                               FontSize="24"
+                               Opacity="0.7"
+                               HorizontalTextAlignment="Center" />
+                        <Label Text="Profile"
+                               FontSize="12"
+                               TextColor="{StaticResource ForestGreen}"
+                               Opacity="0.7"
+                               HorizontalTextAlignment="Center" />
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnProfileTapped" />
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+
+                </Grid>
+
+        </Grid>
+    </Grid>
+    
+</ContentPage>

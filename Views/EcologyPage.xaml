@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tortugueroApp.Views.EcologyPage"
+             BackgroundColor="{StaticResource BackgroundLight}">
+    
+    <Grid RowDefinitions="Auto,*">
+        
+  
+        <Frame Grid.Row="0"
+               Padding="16"
+               CornerRadius="0"
+               HasShadow="True"
+               BorderColor="Transparent"
+               BackgroundColor="#CCF7F5F2">
+            <Grid ColumnDefinitions="48,*,48">
+                <Button Grid.Column="0"
+                       Text="←"
+                       FontSize="24"
+                       TextColor="{StaticResource ForestGreen}"
+                       BackgroundColor="Transparent"
+                       Clicked="OnBackClicked" />
+                
+                <Label Grid.Column="1"
+                       Text="Ecology"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource ForestGreen}"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </Frame>
+
+      
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="0">
+                
+             
+                <Frame Padding="0"
+                       Margin="0"
+                       CornerRadius="0"
+                       HasShadow="False"
+                       BorderColor="Transparent"
+                       IsClippedToBounds="True"
+                       HeightRequest="320">
+                    <Image Source="seaturtleecology.png"
+                           Aspect="AspectFill" />
+                </Frame>
+
+             
+                <VerticalStackLayout Padding="16" Spacing="8">
+                    <Label Text="Discover the Soul of Tortuguero"
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource ForestGreen}"
+                           LineHeight="1.2"
+                           Margin="0,16,0,0" />
+                    
+                    <Label Text="A Sanctuary of Biodiversity"
+                           FontSize="16"
+                           TextColor="{StaticResource ForestGreen}"
+                           Opacity="0.8"
+                           Margin="0,0,0,8" />
+                </VerticalStackLayout>
+
+              
+                <ScrollView Orientation="Horizontal" 
+                           HorizontalScrollBarVisibility="Never"
+                           Padding="16,0"
+                           Margin="0,0,0,24">
+                    <HorizontalStackLayout Spacing="16">
+                        
+                  
+                        <Frame Padding="0"
+                               CornerRadius="12"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               IsClippedToBounds="True"
+                               WidthRequest="160"
+                               HeightRequest="224">
+                            <Grid>
+                                <Image Source="monkey.png"
+                                       Aspect="AspectFill" />
+                                <Frame Padding="8"
+                                       CornerRadius="0"
+                                       HasShadow="False"
+                                       BorderColor="Transparent"
+                                       BackgroundColor="#4D000000"
+                                       VerticalOptions="End">
+                                    <Label Text="Capuchin Monkey"
+                                           FontSize="14"
+                                           FontAttributes="Bold"
+                                           TextColor="White" />
+                                </Frame>
+                            </Grid>
+                        </Frame>
+
+                     
+                        <Frame Padding="0"
+                               CornerRadius="12"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               IsClippedToBounds="True"
+                               WidthRequest="160"
+                               HeightRequest="224">
+                            <Grid>
+                                <Image Source="sloth.png"
+                                       Aspect="AspectFill" />
+                                <Frame Padding="8"
+                                       CornerRadius="0"
+                                       HasShadow="False"
+                                       BorderColor="Transparent"
+                                       BackgroundColor="#4D000000"
+                                       VerticalOptions="End">
+                                    <Label Text="Three-Toed Sloth"
+                                           FontSize="14"
+                                           FontAttributes="Bold"
+                                           TextColor="White" />
+                                </Frame>
+                            </Grid>
+                        </Frame>
+
+                     
+                        <Frame Padding="0"
+                               CornerRadius="12"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               IsClippedToBounds="True"
+                               WidthRequest="160"
+                               HeightRequest="224">
+                            <Grid>
+                                <Image Source="tucan.png"
+                                       Aspect="AspectFill" />
+                                <Frame Padding="8"
+                                       CornerRadius="0"
+                                       HasShadow="False"
+                                       BorderColor="Transparent"
+                                       BackgroundColor="#4D000000"
+                                       VerticalOptions="End">
+                                    <Label Text="Keel-billed Toucan"
+                                           FontSize="14"
+                                           FontAttributes="Bold"
+                                           TextColor="White" />
+                                </Frame>
+                            </Grid>
+                        </Frame>
+
+                  
+                        <Frame Padding="0"
+                               CornerRadius="12"
+                               HasShadow="True"
+                               BorderColor="Transparent"
+                               IsClippedToBounds="True"
+                               WidthRequest="160"
+                               HeightRequest="224">
+                            <Grid>
+                                <Image Source="rana.png"
+                                       Aspect="AspectFill" />
+                                <Frame Padding="8"
+                                       CornerRadius="0"
+                                       HasShadow="False"
+                                       BorderColor="Transparent"
+                                       BackgroundColor="#4D000000"
+                                       VerticalOptions="End">
+                                    <Label Text="Red-Eyed Tree Frog"
+                                           FontSize="14"
+                                           FontAttributes="Bold"
+                                           TextColor="White" />
+                                </Frame>
+                            </Grid>
+                        </Frame>
+
+                    </HorizontalStackLayout>
+                </ScrollView>
+
+         
+                <VerticalStackLayout Padding="16" Spacing="16">
+                    <Label Text="Our Commitment to Preservation"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource ForestGreen}"
+                           Margin="0,0,0,8" />
+
+                   
+                    <Frame Padding="16"
+                           CornerRadius="12"
+                           HasShadow="False"
+                           BorderColor="Transparent"
+                           BackgroundColor="#80EAE5D9">
+                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="16">
+                            <Label Grid.Column="0"
+                                   Text="🌱"
+                                   FontSize="32"
+                                   VerticalTextAlignment="Start" />
+                            <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                <Label Text="Sea Turtle Conservation"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="{StaticResource ForestGreen}" />
+                                <Label Text="We actively protect nesting sites and support local efforts to ensure the survival of sea turtle populations."
+                                       FontSize="14"
+                                       TextColor="{StaticResource ForestGreen}"
+                                       Opacity="0.8"
+                                       LineHeight="1.4" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+
+                 
+                    <Frame Padding="16"
+                           CornerRadius="12"
+                           HasShadow="False"
+                           BorderColor="Transparent"
+                           BackgroundColor="#80EAE5D9"
+                           Margin="0,0,0,24">
+                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="16">
+                            <Label Grid.Column="0"
+                                   Text="🌳"
+                                   FontSize="32"
+                                   VerticalTextAlignment="Start" />
+                            <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                <Label Text="Reforestation Initiatives"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="{StaticResource ForestGreen}" />
+                                <Label Text="Our team participates in planting native trees to restore and expand the rainforest habitat."
+                                       FontSize="14"
+                                       TextColor="{StaticResource ForestGreen}"
+                                       Opacity="0.8"
+                                       LineHeight="1.4" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+        
+    </Grid>
+</ContentPage>

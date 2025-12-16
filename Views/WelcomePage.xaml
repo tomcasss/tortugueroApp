@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tortugueroApp.Views.WelcomePage"
+             BackgroundColor="Black">
+
+    <Grid>
+       
+        <Image Source="welcomebackground.png"
+               Aspect="AspectFill" />
+        
+      
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#1A000000" Offset="0.0" />
+                    <GradientStop Color="#99000000" Offset="1.0" />
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+       
+        <VerticalStackLayout VerticalOptions="End"
+                            Padding="24,0,24,64"
+                            Spacing="32">
+            
+            
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Discover Tortuguero"
+                       FontSize="40"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap" />
+                
+                <Label Text="Your adventure in the heart of the rainforest begins here."
+                       FontSize="18"
+                       TextColor="White"
+                       Opacity="0.9"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"
+                       Margin="0,0,0,8" />
+            </VerticalStackLayout>
+
+          
+            <VerticalStackLayout Spacing="16" MaximumWidthRequest="400">
+                
+               
+                <Button Text="Explore Hotel"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        BackgroundColor="#22C55E"
+                        HeightRequest="56"
+                        CornerRadius="12"
+                        Clicked="OnExploreHotelClicked"
+                        Shadow="{Shadow Brush=Black, Offset='0,4', Radius=10, Opacity=0.3}" />
+
+                
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="16">
+                    
+                    <Button Grid.Column="0"
+                            Text="Login"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            BackgroundColor="#33FFFFFF"
+                            HeightRequest="48"
+                            CornerRadius="12"
+                            Clicked="OnLoginClicked" />
+
+                    <Button Grid.Column="1"
+                            Text="Register"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            BackgroundColor="#33FFFFFF"
+                            HeightRequest="48"
+                            CornerRadius="12"
+                            Clicked="OnRegisterClicked" />
+                    
+                </Grid>
+
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>

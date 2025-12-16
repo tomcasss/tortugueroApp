@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tortugueroApp.Views.HelpPage"
+             BackgroundColor="{StaticResource BackgroundLight}">
+    
+    <Grid RowDefinitions="Auto,Auto,Auto,*">
+        
+      
+        <Frame Grid.Row="0"
+               Padding="16"
+               CornerRadius="0"
+               HasShadow="True"
+               BorderColor="Transparent"
+               BackgroundColor="{StaticResource BackgroundLight}">
+            <Grid ColumnDefinitions="48,*,48">
+                <Button Grid.Column="0"
+                       Text="←"
+                       FontSize="24"
+                       TextColor="{StaticResource ForestGreen}"
+                       BackgroundColor="Transparent"
+                       Clicked="OnBackClicked" />
+                
+                <Label Grid.Column="1"
+                       Text="Help"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource ForestGreen}"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </Frame>
+
+        
+        <Frame Grid.Row="1"
+               Padding="16"
+               CornerRadius="0"
+               HasShadow="False"
+               BorderColor="Transparent"
+               BackgroundColor="{StaticResource BackgroundLight}">
+            <Frame Padding="0"
+                   CornerRadius="12"
+                   HasShadow="False"
+                   BorderColor="#E5E7EB"
+                   BackgroundColor="White">
+                <Grid ColumnDefinitions="40,*">
+                    <Label Grid.Column="0"
+                           Text="🔍"
+                           FontSize="20"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center" />
+                    <Entry Grid.Column="1"
+                           Placeholder="Search for help"
+                           TextColor="{StaticResource ForestGreen}"
+                           PlaceholderColor="#9CA3AF"
+                           BackgroundColor="Transparent" />
+                </Grid>
+            </Frame>
+        </Frame>
+
+     
+        <Frame Grid.Row="2"
+               Padding="16,0"
+               CornerRadius="0"
+               HasShadow="False"
+               BorderColor="Transparent"
+               BackgroundColor="{StaticResource BackgroundLight}">
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,3">
+                <VerticalStackLayout Grid.Column="0" Grid.Row="0" Spacing="0">
+                    <Label Text="FAQs"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource TortugueroGreen}"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,12,0,12" />
+                </VerticalStackLayout>
+                <BoxView Grid.Column="0" Grid.Row="1"
+                         BackgroundColor="{StaticResource TortugueroGreen}"
+                         HeightRequest="3" />
+
+                <VerticalStackLayout Grid.Column="1" Grid.Row="0" Spacing="0">
+                    <Label Text="Contact"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#6B7280"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,12,0,12" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2" Grid.Row="0" Spacing="0">
+                    <Label Text="Emergency"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#6B7280"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,12,0,12" />
+                </VerticalStackLayout>
+            </Grid>
+        </Frame>
+
+    
+        <ScrollView Grid.Row="3">
+            <VerticalStackLayout Padding="16,0,16,24" Spacing="0">
+                
+               
+                <Frame Padding="0"
+                       CornerRadius="0"
+                       HasShadow="False"
+                       BorderColor="Transparent"
+                       BackgroundColor="Transparent">
+                    <VerticalStackLayout Spacing="0">
+                        <BoxView HeightRequest="1"
+                                 BackgroundColor="#E5E7EB"
+                                 Margin="0,8,0,0" />
+                        <Grid ColumnDefinitions="*,40" Padding="0,12">
+                            <Label Grid.Column="0"
+                                   Text="Booking"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource ForestGreen}"
+                                   VerticalTextAlignment="Center" />
+                            <Label Grid.Column="1"
+                                   Text="▼"
+                                   FontSize="16"
+                                   TextColor="{StaticResource ForestGreen}"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" />
+                        </Grid>
+                        <Label Text="You can book your stay directly through our app. Just select your dates, choose your room, and complete the payment. You'll receive a confirmation email with all the details."
+                               TextColor="#6B7280"
+                               FontSize="14"
+                               LineHeight="1.5"
+                               Margin="0,0,0,12" />
+                    </VerticalStackLayout>
+                </Frame>
+
+               
+                <Frame Padding="0"
+                       CornerRadius="0"
+                       HasShadow="False"
+                       BorderColor="Transparent"
+                       BackgroundColor="Transparent">
+                    <VerticalStackLayout Spacing="0">
+                        <BoxView HeightRequest="1"
+                                 BackgroundColor="#E5E7EB"
+                                 Margin="0,8,0,0" />
+                        <Grid ColumnDefinitions="*,40" Padding="0,12">
+                            <Label Grid.Column="0"
+                                   Text="Amenities"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource ForestGreen}"
+                                   VerticalTextAlignment="Center" />
+                            <Label Grid.Column="1"
+                                   Text="▼"
+                                   FontSize="16"
+                                   TextColor="{StaticResource ForestGreen}"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" />
+                        </Grid>
+                        <Label Text="Our hotel offers a variety of amenities including a swimming pool, a restaurant with local and international cuisine, free Wi-Fi, and guided tours to explore Tortuguero's wildlife."
+                               TextColor="#6B7280"
+                               FontSize="14"
+                               LineHeight="1.5"
+                               Margin="0,0,0,12" />
+                    </VerticalStackLayout>
+                </Frame>
+
+              
+                <Frame Padding="0"
+                       CornerRadius="0"
+                       HasShadow="False"
+                       BorderColor="Transparent"
+                       BackgroundColor="Transparent">
+                    <VerticalStackLayout Spacing="0">
+                        <BoxView HeightRequest="1"
+                                 BackgroundColor="#E5E7EB"
+                                 Margin="0,8,0,0" />
+                        <Grid ColumnDefinitions="*,40" Padding="0,12">
+                            <Label Grid.Column="0"
+                                   Text="Local Attractions"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource ForestGreen}"
+                                   VerticalTextAlignment="Center" />
+                            <Label Grid.Column="1"
+                                   Text="▼"
+                                   FontSize="16"
+                                   TextColor="{StaticResource ForestGreen}"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" />
+                        </Grid>
+                        <Label Text="Tortuguero is famous for its National Park, turtle nesting beaches, and canal tours. We can help you arrange tours to experience these amazing attractions."
+                               TextColor="#6B7280"
+                               FontSize="14"
+                               LineHeight="1.5"
+                               Margin="0,0,0,12" />
+                    </VerticalStackLayout>
+                </Frame>
+
+            
+                <Frame Padding="0"
+                       CornerRadius="0"
+                       HasShadow="False"
+                       BorderColor="Transparent"
+                       BackgroundColor="Transparent">
+                    <VerticalStackLayout Spacing="0">
+                        <BoxView HeightRequest="1"
+                                 BackgroundColor="#E5E7EB"
+                                 Margin="0,8,0,0" />
+                        <Grid ColumnDefinitions="*,40" Padding="0,12">
+                            <Label Grid.Column="0"
+                                   Text="Transportation"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource ForestGreen}"
+                                   VerticalTextAlignment="Center" />
+                            <Label Grid.Column="1"
+                                   Text="▼"
+                                   FontSize="16"
+                                   TextColor="{StaticResource ForestGreen}"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center" />
+                        </Grid>
+                        <Label Text="Tortuguero is accessible by boat or small plane. We can assist you in booking your transportation from San José or other major locations in Costa Rica."
+                               TextColor="#6B7280"
+                               FontSize="14"
+                               LineHeight="1.5"
+                               Margin="0,0,0,12" />
+                        <BoxView HeightRequest="1"
+                                 BackgroundColor="#E5E7EB"
+                                 Margin="0,0,0,8" />
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+        
+    </Grid>
+</ContentPage>
