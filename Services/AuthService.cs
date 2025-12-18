@@ -22,24 +22,36 @@ public class AuthService
                 return (false, "Please enter username/email and password", null);
             }
 
-            
-            string identificadorNormalizado = usuarioOCorreo.ToLower().Trim();
+            string identificador = usuarioOCorreo.Trim();
             string contraseniaHash = HashPassword(contrasenia);
 
             var client = await SupabaseService.GetClientAsync();
             
-        
-            var response = await client
+            Usuario? usuario = null;
+
+            var responseEmail = await client
                 .From<Usuario>()
-                .Where(x => x.ContraseniaHash == contraseniaHash)
+                .Where(x => x.Correo == identificador)
                 .Get();
 
-            // Filtrar en memoria por correo o nombre de usuario
-            var usuario = response.Models.FirstOrDefault(u => 
-                u.Correo?.ToLower() == identificadorNormalizado || 
-                u.NombreUsuario?.ToLower() == identificadorNormalizado);
+            if (responseEmail.Models.Count > 0)
+            {
+                usuario = responseEmail.Models[0];
+            }
+            else
+            {
+                var responseUsername = await client
+                    .From<Usuario>()
+                    .Where(x => x.NombreUsuario == identificador)
+                    .Get();
 
-            if (usuario == null)
+                if (responseUsername.Models.Count > 0)
+                {
+                    usuario = responseUsername.Models[0];
+                }
+            }
+
+            if (usuario == null || usuario.ContraseniaHash != contraseniaHash)
             {
                 return (false, "Incorrect username or password", null);
             }
@@ -49,7 +61,7 @@ public class AuthService
         }
         catch (Exception ex)
         {
-            return (false, $"Login error: {ex.Message}", null);
+            return (false, "Incorrect username or password", null);
         }
     }
 
@@ -62,26 +74,11 @@ public class AuthService
     {
         try
         {
-            if (string.IsNullOrWhiteSpace(nombreCompleto) || 
-                string.IsNullOrWhiteSpace(correo) || 
-                string.IsNullOrWhiteSpace(nombreUsuario) ||
-                string.IsNullOrWhiteSpace(contrasenia))
-            {
-                return (false, "Please complete all required fields", null);
-            }
-
-            if (contrasenia.Length < 6)
-            {
-                return (false, "Password must be at least 6 characters", null);
-            }
-
-          
             string correoNormalizado = correo.ToLower().Trim();
-            string usuarioNormalizado = nombreUsuario.ToLower().Trim();
+            string usuarioNormalizado = nombreUsuario.Trim();
 
             var client = await SupabaseService.GetClientAsync();
             
-          
             var existingEmail = await client
                 .From<Usuario>()
                 .Where(x => x.Correo == correoNormalizado)
@@ -92,7 +89,6 @@ public class AuthService
                 return (false, "This email is already registered", null);
             }
 
-          
             var existingUsername = await client
                 .From<Usuario>()
                 .Where(x => x.NombreUsuario == usuarioNormalizado)
@@ -103,7 +99,6 @@ public class AuthService
                 return (false, "This username is already taken", null);
             }
 
-          
             var nuevoUsuario = new Usuario
             {
                 NombreCompleto = nombreCompleto.Trim(),
